@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nahid | Cyber Security Specialist & Esports Coach</title>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron', sans-serif;}
+body{min-height:100vh;background:#020617;color:#e5e7eb;overflow-x:hidden;position:relative;}
+
+/* Cyber Rain Canvas */
+#cyberRain{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+@keyframes glow{
+    0%,100%{text-shadow:0 0 8px #22d3ee;}
+    50%{text-shadow:0 0 25px #22d3ee,0 0 45px #22d3ee;}
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:10;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(2,6,23,.85);
+    border-bottom:1px solid #22d3ee;
+    backdrop-filter:blur(8px);
+}
+header h1{color:#22d3ee;animation:glow 2.5s infinite;}
+nav a{margin-left:28px;color:#e5e7eb;text-decoration:none;position:relative;font-size:14px;}
+nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:#22d3ee;transition:.4s;}
+nav a:hover::after{width:100%;}
+
+section{padding:100px 60px;}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;}
+.hero h2{font-size:56px;margin-bottom:20px;}
+@media (max-width:768px){.hero h2{font-size:36px;}}
+.hero span{color:#22d3ee;animation:glow 2.5s infinite;}
+.hero p{max-width:700px;line-height:1.9;color:#9ca3af;}
+.badge{display:inline-block;margin-top:22px;padding:10px 18px;border:1px solid #22d3ee;border-radius:30px;font-size:12px;color:#22d3ee;letter-spacing:1px;}
+.btn{display:inline-block;margin-top:40px;padding:14px 44px;border:2px solid #22d3ee;border-radius:12px;color:#22d3ee;text-decoration:none;transition:.3s;}
+.btn:hover{background:#22d3ee;color:#020617;box-shadow:0 0 30px #22d3ee;}
+
+h3{font-size:36px;margin-bottom:40px;color:#22d3ee;animation:glow 3s infinite;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;}
+.card{background:rgba(2,6,23,.85);border:1px solid #22d3ee;padding:32px;border-radius:20px;transition:.4s;}
+.card:hover{transform:translateY(-12px);box-shadow:0 0 35px #22d3ee;}
+.terminal-card{font-family:monospace;background:#020617;}
+
+footer{padding:40px;text-align:center;border-top:1px solid #22d3ee;color:#9ca3af;}
+
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+@keyframes typing{from{width:0} to{width:100%}}
+@keyframes blink{50%{border-color:transparent}}
+.typing{overflow:hidden;white-space:nowrap;border-right:3px solid #22d3ee;width:0;animation:typing 4s steps(30,end) forwards, blink .8s infinite;}
+.loader{position:fixed;inset:0;background:#020617;display:flex;align-items:center;justify-content:center;z-index:9999;}
+.loader span{font-size:28px;color:#22d3ee;animation:glow 2s infinite, float 3s infinite;}
+.fade-out{opacity:0;transition:opacity .8s;}
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+    <span>Initializing Cyber System...</span>
+</div>
+
+<header>
+<h1 id="dynamicHeader">WELCOME</h1>
+
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#esports">Esports</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <h2>I’m <span>Nahid</span></h2>
+        <p>
+            Cyber Security Specialist, Professional Web Developer, and Digital Architect.
+            I analyze cyber attacks, strengthen systems, and build futuristic web experiences.
+            Alongside technology, I am an active PUBG MOBILE Esports Coach and Competitive Player.
+        </p>
+        <div class="badge">CYBER SECURITY • DEVELOPMENT • ESPORTS</div><br>
+        <a href="#contact" class="btn">Explore My World</a>
+    </div>
+</section>
+
+<section id="terminal">
+    <h3>Cyber Terminal</h3>
+    <div class="card terminal-card">
+        <p>> booting system...</p>
+        <p>> user: nahid4x</p>
+        <p>> role: cyber_security_specialist</p>
+        <p>> analyzing cyber attacks...</p>
+        <p>> status: <span style="color:#22d3ee;">SECURE</span></p>
+        <p>> esports_mode: PUBG_MOBILE</p>
+        <p>> access_level: ELITE</p>
+    </div>
+</section>
+
+<section id="about"> <h3>About Me</h3> <div class="card"> I am a cyber security-focused developer with expertise in analyzing cyber attacks, identifying vulnerabilities, and designing secure digital infrastructures. My work blends offensive and defensive security knowledge with modern web development. In esports, I apply the same analytical mindset to strategy, leadership, and performance optimization. </div> </section>
+
+<section id="skills">
+    <h3>Technical Expertise</h3>
+    <div class="grid">
+        <div class="card">HTML • CSS • JavaScript</div>
+        <div class="card">PHP • Java • OOP Concepts</div>
+        <div class="card">Cyber Attack Analysis</div>
+        <div class="card">Web Application Security</div>
+        <div class="card">System Hardening</div>
+        <div class="card">Performance Optimization</div>
+    </div>
+</section>
+
+<section id="esports">
+    <h3>Esports Profile</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>PUBG MOBILE Player</h4>
+            <p>High-level competitive experience with strong mechanics, rotations, and decision-making.</p>
+        </div>
+        <div class="card">
+            <h4>Esports Coach</h4>
+            <p>Team strategy, scrim analysis, leadership building, and tournament preparation.</p>
+        </div>
+        <div class="card">
+            <h4>Strategic Leadership</h4>
+            <p>Focused on discipline, communication, and performance consistency in competition.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h3 class="glow-text">Contact</h3>
+    <div class="card glow-card">
+        <p>Email: n4xpower@gmail.com</p>
+        <p>GitHub: github.com/nahid4x</p>
+    
+        <br>
+
+        <!-- Button to open Google Form -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHpW6QAaJiCquBKB3PnnGYmD8FG-2lv1qud-OCr0GiUipmUw/viewform?usp=sf_link" 
+           target="_blank" 
+           class="btn">
+           Click Here to Fill the Form
+        </a>
+    </div>
+</section>
+
+
+<footer>
+    © 2026 Nahid — Cyber Security, Web development & Esports Professional
+</footer>
+
+<!-- Cyber Rain Canvas -->
+<canvas id="cyberRain"></canvas>
+
+<script>
+// Loader
+window.onload = function(){
+    const loader = document.getElementById("loader");
+    loader.classList.add('fade-out');
+    setTimeout(()=> loader.style.display='none', 800);
+}
+
+// Smooth scroll
+const links = document.querySelectorAll('a[href^="#"]');
+links.forEach(link => {
+  link.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+
+// Cyber Rain Effect with Chinese characters
+const canvas = document.getElementById('cyberRain');
+const ctx = canvas.getContext('2d');
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
+
+// Chinese characters for cyber rain
+const chars = '今天属于你，明天属于我 今天属于你，明天属于我'.split('');
+
+
+const fontSize = 10; // small font size for dense rain
+const columns = Math.floor(width / fontSize);
+const drops = Array(columns).fill(1);
+
+function draw() {
+    ctx.fillStyle = 'rgba(0,0,0,0.05)';
+    ctx.fillRect(0,0,width,height);
+    ctx.fillStyle = '#22d3ee';
+    ctx.font = fontSize + 'px monospace';
+
+    for (let i=0;i<drops.length;i++){
+        const text = chars[Math.floor(Math.random()*chars.length)];
+        ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+
+        if(drops[i]*fontSize>height && Math.random()>0.975){drops[i]=0;}
+        drops[i]++;
+    }
+}
+
+setInterval(draw,50);
+
+window.addEventListener('resize',()=>{
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+});
+</script>
+
+</body>
+</html>
